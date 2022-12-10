@@ -1,38 +1,137 @@
-.App {
+.App ul{
+  display: flex;
+  margin: 0 ;
+
+  flex-direction: column;
+  margin-right: 2rem;
+  background-color:#d31862;
+  max-height: 100%;
+  list-style: none;
+  padding: 0;
+  width: 15rem;
+}
+.App{
+  display: flex;
+  width: auto;
+  min-height: 100vh;
+}
+.App a{
+  color: aliceblue;
+  text-decoration: none;
+ 
+}
+.App li{
+  padding: 1rem 2rem;
+  border-bottom: 1px solid;
+
+}
+table{
+  width: 60rem;
+  text-align: center;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+table th{
+  font-size: 1.5rem;
+  text-decoration: underline;
+
+}
+table td{
+  border-bottom: 1px solid;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+
+}
+table td:hover{
+  background-color:rgb(230, 230, 230);
+  color: #2196f3;
+ 
+  transition: 500ms;
+}
+.btn button{
+
+margin-right: 2rem;
+color: black;
+
+}
+a:hover{
+  color: black;
+  transition: 500ms;
+}
+.home-page_btn{
+  display: flex;
+  padding: 3rem 10rem;
+  justify-content: space-around;
+  width: 30rem;
+
+}
+.home-page{
+  width: 100%;
+}
+.btns{
+  color:red;
+}
+canvas{
+  width: 50rem !important;
+  height: 20rem !important;
+
+}
+.student-page p {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.refreshIcon svg{
+  animation: rotate 0.5s infinite;
+  color: red;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.student-page {
+  width: 100%;
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(-360deg);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.create-btn {
+  width: 60rem;
+  text-align: end;
+  margin-top: 1rem;
+}
+.create-btn button{
+  height: 2rem;
+  
+}
+form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.student-form{
+  display: flex;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
+form{
+width: 30rem;
 
-.App-link {
-  color: #61dafb;
+
+gap: 2rem;
+
+
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form .btn{
+  text-align: center;
+}
+form .btn button{
+  padding: 0.3rem 3rem;
+}
+.form-text{
+  text-align: center;
+  color: rgb(91, 91, 91);
+}
+.update-area{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
