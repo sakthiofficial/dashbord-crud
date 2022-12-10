@@ -10,7 +10,7 @@ export function Studentupdate() {
   let [data,setdata]= useState(null)
   let {id}= useParams()
   let getData= ()=>{
-fetch(`https://63899fdc4eccb986e895a926.mockapi.io/sampleapi/${id}`).then(res=>res.json()).then(val=>setdata(val))
+fetch(`https://63899fdc4eccb986e895a926.mockapi.io/students/${id}`).then(res=>res.json()).then(val=>setdata(val))
   }
   useEffect(()=>getData(),[])
 
@@ -24,6 +24,7 @@ return(
 )
 }
 function StudentupdateInfo({data,id}){ 
+  console.log(data)
 let[name,setname]=useState(data.name)
   let[classSt,setclassSt]=useState(data.class)
   let[age,setage]=useState(data.age)
@@ -39,7 +40,7 @@ let[name,setname]=useState(data.name)
     let studentData = JSON.stringify(studentInfo);
     console.log(id)
  
-    fetch(`https://63899fdc4eccb986e895a926.mockapi.io/sampleapi/${id}`, {
+    fetch(`https://63899fdc4eccb986e895a926.mockapi.io/students/${id}`, {
       method: "PUT",
      
       body: studentData,

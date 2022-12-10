@@ -18,7 +18,7 @@ export function StudentForm() {
   let postData =()=> {
     let studentData = JSON.stringify(studentInfo);
   console.log(studentData);
-    fetch("https://63899fdc4eccb986e895a926.mockapi.io/sampleapi", {
+    fetch("https://63899fdc4eccb986e895a926.mockapi.io/students", {
       method: "POST",
      
       body: studentData,

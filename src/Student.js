@@ -10,7 +10,7 @@ export function Student() {
 
  let[Student,setStudent] = useState(null)
 function getData (){
-  fetch("https://63899fdc4eccb986e895a926.mockapi.io/sampleapi").then(val=>val.json()).then(dt => setStudent(dt))
+  fetch("https://63899fdc4eccb986e895a926.mockapi.io/students").then(val=>val.json()).then(dt => setStudent(dt))
 
 }
  useEffect(()=>getData,[])
@@ -24,7 +24,7 @@ function getData (){
 function StudentInfo({data,getData}){
   let navigate = useNavigate()
 let deleteData =(ele)=>{
-  fetch(`https://63899fdc4eccb986e895a926.mockapi.io/sampleapi/${ele}`,{
+  fetch(`https://63899fdc4eccb986e895a926.mockapi.io/students/${ele}`,{
    method:"DELETE"
   }).then(()=>getData())
 
